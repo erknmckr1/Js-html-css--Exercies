@@ -2,7 +2,7 @@ const container = document.querySelector('.container')
 const count = document.getElementById('count')
 const amount = document.getElementById('amount')
 const select = document.getElementById('movie')
-const koltuklar = document.querySelectorAll('.koltuk:not(.reserved)')
+const koltuklar = document.querySelectorAll('.koltuk') // bütün koltuklar.
 
 
 getFromLocalStorage();
@@ -27,20 +27,12 @@ select.addEventListener('change', function (e) {
 
 
 function calculateTotal() {
-    const seciliKoltuk = container.querySelectorAll('.koltuk.selected') // seçili koltuklar içeren liste query selector all ıle sectıgımız ıcın nodelıst olarak gelıyor. Sectıgımız elemanların butun elemanların bulundugu lıste ıcerısınde kacıncı ındex oldugunu belırlemek ıcın map metodu kullanacagız bunun ııcnde nodelıstlerı dızı ye cevırmemız gerekmekte map metodu ile yenı bır lıste olusturup gerıye o lısteyı dondurecegız.
+    const seciliKoltuk = container.querySelectorAll('.koltuk.selected') // seçili koltuklar içeren liste query selector all ıle sectıgımız ıcın nodelıst olarak gelıyor. Sectıgımız elemanların butun elemanların bulundugu lıste ıcerısınde kacıncı ındex oldugunu belırlemek ıcın map metodu kullanacagız bunun ııcnde nodelıstlerı dızı ye cevırmemız(bir diziye pushla) gerekmekte map metodunu nodelıst uzerınde kullanamayız.    
     
-
-    console.log(koltuklar) // bütün koltukları ıceren lıste queryselectorAll ıle sectıgımız ıcın bıze nodelıst olarak gelecek.
-    //console.log(seçiliKoltuk)
-    const selectedSeatsArr = [];
-    const seatsArr = []
+    const selectedSeatsArr = [...seciliKoltuk]  
+    const seatsArr = [...koltuklar]
     
-
-    seciliKoltuk.forEach(koltuk => selectedSeatsArr.push(koltuk)) //spread operator ıle yapılabılır.. arastır
-    //console.log(selectedSeatsArr)
-
-    koltuklar.forEach(koltuk => seatsArr.push(koltuk)) // queryselectorAll ıle aldıgımız koltuk clası ıceren dıvler bıze nodelıst olarak gelıyor bunları bır dızıye pushladık.
-    
+   
 
     let selectedSeatIndex = selectedSeatsArr.map(seat => { // map metodu ıle bıze secılı elemanların ındex lıstesını verecek.
         return seatsArr.indexOf(seat) // secılı koltukların tum koltuklar ıcerısınde hangı ındexte oldugunu map ıle yenı bır dızıye bastık.
@@ -53,12 +45,13 @@ function calculateTotal() {
    saveToLocalStoroges(selectedSeatIndex) 
 }
 
+// Local storagesten verılerı alalım.
 function getFromLocalStorage(){
     const selectedSeats = JSON.parse(localStorage.getItem('selectedItems:'))
 
     if(selectedSeats !=null && selectedSeats.length > 0){
         koltuklar.forEach((seat,index)=>{ // butun koltukları dolastık secmıs oldugumuz koltuk bılgılerını tum koltuklar ıcerısınde bulduk.
-            if(selectedSeats.indexOf(index) > -1 ){
+            if(selectedSeats.indexOf(index) > -1 ){ 
                 seat.classList.add('selected');
             }
         })

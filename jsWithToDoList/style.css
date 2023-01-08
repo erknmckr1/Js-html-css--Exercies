@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: #F9E79F ;
+    width: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+}
+.header{
+    
+    margin-top: 20px;
+    border: 1px solid black;
+    border-width: 0;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    width:500px;
+    background-color: #58D68D;
+    
+    
+}
+.todo_div{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.todoİnput{
+    width: 300px;
+    font-size: 0.9rem;
+    background-color: #A9CCE3  ;
+    border-radius: 10px;
+    height: 35px;
+    border: 0px;
+    outline: none;
+    padding: 4px 6px;
+    color: white;
+}
+
+.todo_div button{
+    height: 40px;
+    font-size: 12px;    
+}
+.todo_title{
+    display: flex;
+    justify-content: center;
+    color: #A93226 ;
+    font-size:3rem;
+    border-bottom: 1px solid black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.buttons button{
+    border-width: 0px; 
+    background-color: #E5E7E9;
+}
+
+.buttons button i:hover{
+    transform: scale(1.3);
+}
+.comleted,.deleted,.edit{
+    margin-left: 8px;
+}
+.completed i{
+    font-size: 20px;
+    color: blue;
+}
+.deleted i{
+    font-size: 20px;
+    color: red;
+}
+.edit i{
+    font-size: 20px;
+    color: yellow;
+}
+.add_button{
+    display: flex;
+    justify-content: center;
+}
+.add_button button:hover{
+    background-color: #D4AC0D;
+    border: 1px solid  #D4AC0D;
+    color: black;
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+
+/* Liste kısmı */
+.listt{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 400px;
+    background-color: #E5E7E9;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 0 10px;
+}
+
+
+
+
+.textLine{
+    text-decoration: line-through;
+    text-decoration-thickness: 0.2rem;
+    text-decoration-color:red ;
+}
