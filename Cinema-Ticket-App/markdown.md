@@ -1,0 +1,1 @@
+![Ticket App İmages](/Cinema-Ticket-App/images/picture.png)

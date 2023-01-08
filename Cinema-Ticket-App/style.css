@@ -1,0 +1,83 @@
+body{
+    background-color: #A9CCE3 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* saayfanın tamamını kullanmak ıcın kullanmasam ıcındeki div kadar yer kaplyacak. */
+    margin: 0;
+    color: #fff;
+    box-sizing: border-box;
+    
+}
+.title{
+    font-family: "Great Vibes", cursive;
+    font-size: 5rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    padding: 0 3rem;
+    color:#aa7775  ;
+}
+.container{
+    border:4px solid rgb(116, 91, 69);
+    padding: 10px;
+    background-color:#17202A;
+    
+}
+.koltuk{
+    background-color: #9898a3;
+    height: 50px;
+    width: 50px;
+    margin: 5px; 
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row{
+    display: flex;
+}
+.koltuk.selected{
+    background-color: rgb(133, 153, 242);
+}
+.koltuk.reserved{
+    background-color:red;
+}
+.koltuk:not(.reserved):hover{ /* reserved clasına sahıp olan koltuklarda hover çalısmayacak. */
+    cursor: pointer;
+    transform: scale(1.3);
+}
+.koltuk:nth-of-type(2){ /* 2. elemandan sonra 20px lik bir margın verdık */
+    margin-right: 20px;
+}
+.koltuk:nth-last-of-type(2){ /* sondan 2. elemandan sonra 20 px sola margin verdik.  */
+    margin-left: 20px;
+}
+.screen{
+    background-color: white;
+    width: 100%;
+    height: 70px;
+    margin-bottom: 20px;
+    box-shadow: rgba(255, 255, 255, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 255, 255, 0.12) 0px 4px 6px, rgba(255, 255, 255, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.09) 0px -3px 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-list{
+    margin-top: 20px;
+}
+.info{
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    display: flex;
+    color: aliceblue;
+    padding: 5px 10px;
+    margin-top: 20px;
+}
+.info li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+.text span{
+    color: #17202A;
+}

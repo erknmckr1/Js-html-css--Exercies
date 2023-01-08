@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinema Ticket</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <h1 class="title">Select Seat</h1>
+    </div>
+    <div class="container">
+        
+        <div class="screen price">
+            <span> ücret</span>
+        </div>
+        <div class="row">
+            <div class="koltuk"><small>1</small></div>
+            <div class="koltuk"><small>2</small></div>
+            <div class="koltuk reserved"><small>3</small></div>
+            <div class="koltuk"><small>4</small></div>
+            <div class="koltuk"><small>5</small></div>
+            <div class="koltuk"><small>6</small></div>
+            <div class="koltuk"><small>7</small></div>
+            <div class="koltuk"><small>8</small></div>
+        </div>
+        <div class="row">
+            <div class="koltuk"><small>9</small></div>
+            <div class="koltuk"><small>10</small></div>
+            <div class="koltuk"><small>11</small></div>
+            <div class="koltuk"><small>12</small></div>
+            <div class="koltuk"><small>13</small></div>
+            <div class="koltuk"><small>14</small></div>
+            <div class="koltuk"><small>15</small></div>
+            <div class="koltuk"><small>16</small></div>
+        </div>
+        <div class="row">
+            <div class="koltuk"></div>
+            <div class="koltuk"></div>
+            <div class="koltuk"></div>
+            <div class="koltuk"></div>
+            <div class="koltuk"></div>
+            <div class="koltuk"></div>
+            <div class="koltuk"></div>
+            <div class="koltuk"></div>
+        </div>
+        <div class="row">
+            <div class="koltuk"></div>
+            <div class="koltuk"></div>
+            <div class="koltuk"></div>
+            <div class="koltuk"></div>
+            <div class="koltuk"></div>
+            <div class="koltuk"></div>
+            <div class="koltuk"></div>
+            <div class="koltuk"></div>
+        </div>
+        <div class="row">
+            <div class="koltuk"></div>
+            <div class="koltuk reserved"></div>
+            <div class="koltuk"></div>
+            <div class="koltuk"></div>
+            <div class="koltuk"></div>
+            <div class="koltuk"></div>
+            <div class="koltuk"></div>
+            <div class="koltuk reserved"></div>
+        </div>
+    </div>
+
+    <div class="movie-list">
+        <select name="" id="movie">
+            <option disabled">Film Seçiniz</option>
+            <option value="20">Movie 1 </option>
+            <option value="140">Çakallarla Dans 6</option>
+            <option value="120">Kutsal Damacana 4 </option>
+        </select>
+    </div>
+    <ul class="info">
+        <li>
+            <div class="koltuk selected"></div>
+            <small>Seçili</small>
+
+        </li>
+        <li>
+            <div class="koltuk"></div>
+            <small>Boş</small>
+
+        </li>
+        <li>
+            <div class="koltuk reserved"></div>
+            <small>Rezerv</small>
+
+        </li>
+    </ul>
+    <p class="text">
+        <span id="count"></span> adet koltuk ıcın hesaplanan ücret <span id="amount"></span>
+    </p>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
